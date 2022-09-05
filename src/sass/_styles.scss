@@ -9,10 +9,10 @@ body {
   line-height: 1.5;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
+// img {
+//   display: block;
+//   // max-width: 100%;
+// }
 
 ul {
   list-style: none;
@@ -52,24 +52,28 @@ input {
 // }
 
 .load-more {
-  position: fixed;
-  // left: 500px;
-  right: 5px;
-  bottom: 5px;
+  // position: fixed;
+  // right: 5px;
+  // bottom: 5px;
+  display: flex;
+  align-self: center;
+  margin: auto;
+  margin-bottom: 50px;
+
   padding: 8px 12px;
   font: inherit;
-  color: black;
+  color: white;
   cursor: pointer;
-  background-color: aliceblue;
+  background-color: darkblue;
   border-radius: 6px;
   border: #fafafa;
   box-shadow: 1px 5px 5px gray;
 }
 
 .is-hidden {
-    visibility: hidden;
-      pointer-events: none;
-      position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
 }
 
 
@@ -77,35 +81,47 @@ input {
   display: grid;
   max-width: 1140px;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-auto-rows: 240px;
+  grid-auto-rows: 300px;
   grid-gap: 12px;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+  padding: 12px 0;
 }
 
 .photo-card {
-  position: relative;
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
-      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
-}
-
-.gallery__image:hover {
-  transform: scale(1.03);
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
 .gallery__image {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.gallery__link {
   display: block;
-  text-decoration: none;
-  height: 100%;
+  height: 77%;
+  width: 100%;
+  object-fit:cover;
 }
 
-.gallery__link:hover {
-  cursor: zoom-in;
+.info {
+  display: flex;
+  justify-content:space-between;
+  padding: 10px;
 }
+
+.info-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+// .gallery__item {
+//   display: block;
+//   text-decoration: none;
+//   height: 100%;
+// }
+
+// .gallery__item:hover {
+//   cursor: zoom-in;
+// }
